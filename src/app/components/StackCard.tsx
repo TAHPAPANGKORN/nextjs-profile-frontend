@@ -46,7 +46,7 @@ export const StackCards = () => {
   };
 
   return (
-    <div id="about" className="flex flex-col items-center  p-40 h-[100vh] z-0 ">
+    <div id="about" className="flex flex-col items-center  md:p-40 h-[100vh] z-0">
       <h1 className="text-3xl font-bold mb-4 z-9 tracking-wide">About</h1>
       <div className="relative h-full w-105 mx-10  md:w-130 ">
         <AnimatePresence>
@@ -54,7 +54,7 @@ export const StackCards = () => {
             <motion.div
               key={card.id}
               layout // เพิ่ม layout เพื่อให้ Framer Motion จัดการ animation ของตำแหน่ง
-              className="absolute ml-16 w-70 h-180 md:h-150 md:mx-0 md:w-full bg-white shadow-xl rounded-xl flex flex-col items-center p-4"
+              className="absolute ml-13 w-80 h-155 md:h-150 md:mx-0 md:w-full bg-white shadow-xl rounded-xl flex flex-col items-center p-4"
               style={{ left: index * 5, zIndex: stack.length - index }}
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}

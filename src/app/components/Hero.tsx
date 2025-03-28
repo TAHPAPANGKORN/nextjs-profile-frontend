@@ -15,17 +15,16 @@ export const HeroSection = () => {
       className="relative z-0 overflow-x-clip h-[100vh] flex flex-col items-center justify-center"
     >
       <div className="flex flex-col justify-center items-center mx-20 md:mx-40">
-        <h1 className="text- md:text-5xl text-center mt-8 tracking-wide">
+        <h1 className="text-3xl md:text-5xl text-center mt-8 tracking-wide">
           <TypeAnimation
             sequence={[
-              // Same substring at the start will only be typed out once, initially
               "Hi, I am Papangkorn",
-              3000, // wait 1s before replacing "Mice" with "Hamsters"
+              3000, 
               "Hi, I am study in com-sci",
               2000,
             ]}
             wrapper="span"
-            speed={50}
+            speed={30}
             repeat={Infinity}
           />
         </h1>

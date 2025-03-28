@@ -3,8 +3,8 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Created with the help of Frontend Tribe",
+  title: "Papangkorn | Profile",
+  description: "Personal portfolio showcasing projects and skills",
 };
 
 export default function RootLayout({
