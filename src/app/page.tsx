@@ -1,6 +1,6 @@
-import { Header } from "@/app/component/Header";
-import { HeroSection } from "@/app/component/Hero";
-import { StackCards }  from "@/app/component/StackCard";
+import { Header } from "@/app/components/Header";
+import { HeroSection } from "@/app/components/Hero";
+import { StackCards }  from "@/app/components/StackCard";
 
 export const runtime = 'edge';
 
