@@ -42,40 +42,42 @@ export const StackCards = () => {
   return (
     <div
       id="about"
-      className="flex flex-col items-center  md:p-50 h-[100vh] z-0"
+      className="md:p-50 h-[100vh] z-0 "
     >
-      <h1 className="header-item mb-5">About</h1>
-      <div className="relative h-full w-105 mx-10  md:w-130 ">
-        <AnimatePresence>
-          {stack.map((card, index) => (
-            <motion.div
-              key={card.id}
-              layout // เพิ่ม layout เพื่อให้ Framer Motion จัดการ animation ของตำแหน่ง
-              className="absolute ml-13 w-80 h-90 md:h-100 md:mx-0 md:w-full bg-white shadow-xl rounded-xl flex flex-col items-center  p-4"
-              style={{ left: index * 5, zIndex: stack.length - index }}
-              initial={{ scale: 0.8, opacity: 0, y: 50 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.8, opacity: 0, y: -50 }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              whileHover={{ scale: 1.05 }} // เพิ่ม animation ขยายเมื่อ hover
-              whileTap={{ scale: 0.95 }} // เพิ่ม animation เมื่อกด
-            >
-              <h2 className="text-xl font-bold">{card.title}</h2>
-              <div>
-              <p
-                className="text-[12px] mt-5 md:text-2xl m-2 "
-                dangerouslySetInnerHTML={{ __html: card.content }}
-              />
-              </div>
-              <span
-                className="absolute right-10  bottom-3 md:bottom-10 text-3xl cursor-pointer hover:text-black/30"
-                onClick={() => handleRemove(card.id)}
+      <div className="flex flex-col mt-50 justify-center items-center ">
+        <h1 className="header-item mb-5">About</h1>
+        <div className="relative  w-105 mx-10 md:w-130">
+          <AnimatePresence>
+            {stack.map((card, index) => (
+              <motion.div
+                key={card.id}
+                layout // เพิ่ม layout เพื่อให้ Framer Motion จัดการ animation ของตำแหน่ง
+                className="absolute ml-13 w-80 h-90 md:h-100 md:mx-0 md:w-full bg-white shadow-xl rounded-xl flex flex-col items-center  p-4"
+                style={{ left: index * 5, zIndex: stack.length - index }}
+                initial={{ scale: 0.8, opacity: 0, y: 50 }}
+                animate={{ scale: 1, opacity: 1, y: 0 }}
+                exit={{ scale: 0.8, opacity: 0, y: -50 }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                whileHover={{ scale: 1.05 }} // เพิ่ม animation ขยายเมื่อ hover
+                whileTap={{ scale: 0.95 }} // เพิ่ม animation เมื่อกด
               >
-                →
-              </span>
-            </motion.div>
-          ))}
-        </AnimatePresence>
+                <h2 className="text-xl font-bold">{card.title}</h2>
+                <div>
+                  <p
+                    className="text-[12px] mt-5 md:text-2xl m-2 "
+                    dangerouslySetInnerHTML={{ __html: card.content }}
+                  />
+                </div>
+                <span
+                  className="absolute right-10  bottom-3 md:bottom-10 text-3xl cursor-pointer hover:text-black/30"
+                  onClick={() => handleRemove(card.id)}
+                >
+                  →
+                </span>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
       </div>
     </div>
   );

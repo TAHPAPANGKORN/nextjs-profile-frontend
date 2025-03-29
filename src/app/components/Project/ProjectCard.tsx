@@ -6,7 +6,7 @@ imageSrc: string | StaticImageData;
   altText: string;
   title: string;
   description: string;
-  projectLink: string;
+  projectLink: string | null;
   repoLink: string;
 }
 
@@ -26,15 +26,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         alt={altText}
         height={300}
         width={500}
-        className="rounded-xs shadow-xl shadow-gray-400"
+        className="rounded-xl shadow-xl shadow-gray-400"
       />
       <div className="flex flex-col gap-3 w-full">
         <h2 className="font-bold text-2xl">{title}</h2>
         <p className="text-[12px] md:text-xl w-90 md:w-130">{description}</p>
         <div className="flex gap-4 underline underline-offset-1 text-blue-500">
-          <a href={projectLink} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
+          {projectLink && (
+            <a href={projectLink} target="_blank" rel="noopener noreferrer">
+              View Project
+            </a>
+          )}
           <a href={repoLink} target="_blank" rel="noopener noreferrer">
             GitHub Repo
           </a>

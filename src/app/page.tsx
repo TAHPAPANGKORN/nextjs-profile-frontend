@@ -2,7 +2,7 @@ import { Header } from "@/app/components/Header/Header";
 import { HeroSection } from "@/app/components/Hero/Hero";
 import { StackCards }  from "@/app/components/StackCard/StackCard";
 import { Certificate } from "./components/Certificate/Certificate";
-import Project from "./components/Project/Project";
+import { Project } from "@/app/components/Project/Project"
 
 export const runtime = 'edge';
 
