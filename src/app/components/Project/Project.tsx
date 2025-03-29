@@ -63,6 +63,14 @@ const card = [
     repoLink: "https://github.com/TAHPAPANGKORN/automatic-robot-PSP-SCHOOL-for-OBEC",
     imageSrc: ComingSoon,
   },
+  {
+    id: 8,
+    title: "ConnectedWordsGame for Director",
+    description: "Creating a code for detect same word",
+    projectLink: null,
+    repoLink: "https://github.com/TAHPAPANGKORN/ConnectedWordsGameForDirector",
+    imageSrc: ComingSoon,
+  },
 ];
 
 export const Project = () => {
