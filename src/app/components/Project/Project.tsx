@@ -3,7 +3,6 @@ import ProjectCard from './ProjectCard';
 import DiscordProject from "@/app/assets/images/ProjectImage/Discord-Project.png";
 import WebProfile from "@/app/assets/images/ProjectImage/Website-Profile.png";
 import WebNextJs from "@/app/assets/images/ProjectImage/Website-Nextjs.png"
-import RobotCode from "@/app/assets/images/ProjectImage/Robot-Code.png"
 import ComingSoon from "@/app/assets/images/ProjectImage/ComingSoon-image.jpg"
 
 const card = [

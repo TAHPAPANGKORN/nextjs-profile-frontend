@@ -2,7 +2,7 @@ import React from 'react'
 import Image, { StaticImageData } from 'next/image'
 
 interface ProjectCardProps {
-imageSrc: string | StaticImageData;
+  imageSrc: string | StaticImageData;
   altText: string;
   title: string;
   description: string;
