@@ -33,11 +33,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-[12px] md:text-xl w-90 md:w-130">{description}</p>
         <div className="flex gap-4 underline underline-offset-1 text-blue-500">
           {projectLink && (
-            <a href={projectLink} target="_blank" rel="noopener noreferrer">
+            <a href={projectLink} target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
               View Project
             </a>
           )}
-          <a href={repoLink} target="_blank" rel="noopener noreferrer">
+          <a href={repoLink} target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
             GitHub Repo
           </a>
         </div>

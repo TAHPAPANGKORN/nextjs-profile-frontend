@@ -3,29 +3,31 @@ import ProjectCard from './ProjectCard';
 import DiscordProject from "@/app/assets/images/ProjectImage/Discord-Project.png";
 import WebProfile from "@/app/assets/images/ProjectImage/Website-Profile.png";
 import WebNextJs from "@/app/assets/images/ProjectImage/Website-Nextjs.png"
+import RobotCode from "@/app/assets/images/ProjectImage/Robot-Code.png"
 import ComingSoon from "@/app/assets/images/ProjectImage/ComingSoon-image.jpg"
+
 const card = [
   {
     id: 1,
     title: "Poke bot discord",
     description: "Creating a bot that can replace the missing alarm system on Discord can be done using Python and various libraries, such as `discord.py`, to interact with the Discord API.",
-    projectLink: "https://youtu.be/0HeG3MOLzP0?si=LdNVMXReGyC2IY8_",
+    projectLink: "https://discord.com/oauth2/authorize?client_id=1208764608727359601",
     repoLink: "https://github.com/TAHPAPANGKORN/PokeBotDiscord",
     imageSrc: DiscordProject,
   },
   {
     id: 2,
     title: "Profile-web with next.js",
-    description: "Creating a bot that can replace the missing alarm system on Discord can be done using Python and various libraries, such as `discord.py`, to interact with the Discord API.",
-    projectLink: "https://youtu.be/0HeG3MOLzP0?si=LdNVMXReGyC2IY8_",
-    repoLink: "https://github.com/TAHPAPANGKORN/PokeBotDiscord",
+    description: "A personal portfolio website built using next.js technologies.",
+    projectLink: "#",
+    repoLink: "https://github.com/TAHPAPANGKORN/nextJs-Profile",
     imageSrc: WebNextJs,
   },
   {
     id: 3,
     title: "Web Profile (Old Versions)",
     description: "A personal portfolio website built using modern web technologies.",
-    projectLink: "https://papangkorn-profile.pages.dev/Project",
+    projectLink: "https://papangkorn-profile.pages.dev",
     repoLink: "https://github.com/example/web-profile",
     imageSrc: WebProfile,
   },
@@ -50,7 +52,15 @@ const card = [
     title: "PHP-Calculator",
     description: "Creating a Calculator use PHP",
     projectLink: null,
-    repoLink: "https://github.com/TAHPAPANGKORN/Modulo-Calculator",
+    repoLink: "https://github.com/TAHPAPANGKORN/Website-PHP-Calculator",
+    imageSrc: ComingSoon,
+  },
+  {
+    id: 7,
+    title: "code-automatic robot",
+    description: "Creating for auto line robot",
+    projectLink: null,
+    repoLink: "https://github.com/TAHPAPANGKORN/automatic-robot-PSP-SCHOOL-for-OBEC",
     imageSrc: ComingSoon,
   },
 ];
