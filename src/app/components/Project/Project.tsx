@@ -27,7 +27,7 @@ const card = [
     title: "Web Profile (Old Versions)",
     description: "A personal portfolio website built using modern web technologies.",
     projectLink: "https://papangkorn-profile.pages.dev",
-    repoLink: "https://github.com/example/web-profile",
+    repoLink: "https://github.com/TAHPAPANGKORN/Papangkorn-Profile",
     imageSrc: WebProfile,
   },
   {
