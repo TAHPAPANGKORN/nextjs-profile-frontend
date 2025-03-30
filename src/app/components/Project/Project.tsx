@@ -74,7 +74,7 @@ const card = [
 
 export const Project = () => {
   return (
-    <div id="project" className="bg-[#F3F4F6] flex flex-col items-center justify-center py-5 gap-20">
+    <div id="projects" className="bg-[#F3F4F6] flex flex-col items-center justify-center py-5 gap-20 scroll-mt-9">
       <h1 className="header-item mt-5">Projects</h1>
       {card.map((item) => (
         <ProjectCard

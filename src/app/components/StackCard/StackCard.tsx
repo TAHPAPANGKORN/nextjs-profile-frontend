@@ -41,7 +41,7 @@ export const StackCards = () => {
   };
 
   return (
-    <div id="about" className="md:p-50 h-[100vh] z-0 ">
+    <div id="about" className="md:p-10 h-[100vh] z-0 scroll-mt-[40px] md:-scroll-mt-24 lg:scroll-mt-0">
       <div className="flex flex-col mt-50 justify-center items-center ">
         <h1 className="header-item mb-5">About</h1>
         <div className="relative  w-105 mx-10 md:w-130">
