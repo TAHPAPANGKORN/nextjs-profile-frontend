@@ -4,7 +4,7 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiVim, SiArduino } from "react-icons/si";
 
-let logoArr = [
+const logoArr = [
   { icon: <FaHtml5 />, name: "HTML5" },
   { icon: <FaCss3Alt />, name: "CSS3" },
   { icon: <IoLogoJavascript />, name: "JavaScript" },
