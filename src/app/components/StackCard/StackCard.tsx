@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { IoIosArrowForward } from "react-icons/io";
 
 const cards = [
   {
@@ -66,8 +67,8 @@ export const StackCards = () => {
                     dangerouslySetInnerHTML={{ __html: card.content }}
                   />
                 </div>
-                <span className="absolute right-10  bottom-3 md:bottom-10 text-3xl cursor-pointer hover:text-black/30">
-                  →
+                <span className="absolute right-10  bottom-5 md:bottom-10 text-3xl cursor-pointer hover:text-black/30">
+                  <IoIosArrowForward />
                 </span>
               </motion.div>
             ))}
