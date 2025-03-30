@@ -1,5 +1,6 @@
 import React from 'react'
 import Image, { StaticImageData } from 'next/image'
+import Link from 'next/link';
 
 interface ProjectCardProps {
   imageSrc: string | StaticImageData;
@@ -33,13 +34,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="text-[12px] md:text-xl w-90 md:w-130">{description}</p>
         <div className="flex gap-4 underline underline-offset-1 text-blue-500">
           {projectLink && (
-            <a href={projectLink} target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
+            <Link href={projectLink} target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
               View Project
-            </a>
+            </Link>
           )}
-          <a href={repoLink} target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
+          <Link href={repoLink} target="_blank" rel="noopener noreferrer" className='hover:text-gray-500'>
             GitHub Repo
-          </a>
+          </Link>
         </div>
       </div>
     </div>

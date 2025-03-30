@@ -13,6 +13,7 @@ export const HeroSection = () => {
   return (
     <div
       data-aos="fade-up"
+      id="hero"
       className="relative z-0 overflow-x-clip h-[100vh] flex flex-col items-center justify-center"
     >
       <div className="flex flex-col justify-center items-center mx-20 md:mx-40">
