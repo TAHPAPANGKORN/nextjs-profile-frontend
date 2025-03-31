@@ -1,4 +1,3 @@
-import Link from "next/link";
 import InstagramBtn from "./UiBtn/InstagramBtn";
 import YoutubeBtn from "./UiBtn/YoutubeBtn";
 import DiscordBtn from "./UiBtn/DiscordBtn";
