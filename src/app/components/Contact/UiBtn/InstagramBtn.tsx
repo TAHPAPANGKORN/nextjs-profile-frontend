@@ -4,7 +4,7 @@ import Link from 'next/link'
 function InstagramBtn() {
   return (
     <Link
-      href="#"
+      href="https://www.instagram.com/xfattahz/"
       target="_blank"
       className="btn-contact bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600"
     >

@@ -4,7 +4,7 @@ import Link from 'next/link'
 function GithubBtn() {
   return (
     <Link
-      href="#"
+      href="https://github.com/TAHPAPANGKORN"
       target="_blank"
       className="btn-contact bg-gradient-to-r from-[#181717] to-[#181717] hover:from-[#181717] hover:to-[#4078c0]"
     >

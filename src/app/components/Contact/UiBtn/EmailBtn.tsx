@@ -4,7 +4,7 @@ import Link from 'next/link'
 function EmailBtn() {
   return (
     <Link
-      href="#"
+      href="mailto:67160072@go.buu.ac.th"
       target="_blank"
       className="btn-contact bg-gradient-to-r from-[#4285F4] to-[#34A853] hover:from-[#34A853] hover:to-[#FFB600]"
     >
