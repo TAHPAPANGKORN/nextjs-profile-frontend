@@ -14,8 +14,8 @@ export const HeroSection = () => {
     <div
       data-aos="fade-up"
       id="home"
-      className="relative z-0 overflow-x-clip h-[100vh] flex flex-col items-center justify-center"
-    >
+      className="relative z-0 overflow-x-clip min-h-screen flex flex-col items-center justify-center bg-gradient-to-t from-white to-gray-200"
+      >
       <div className="flex flex-col justify-center items-center mx-20 md:mx-40">
         <h1 className="text-3xl md:text-5xl text-center mt-8 tracking-wide">
           <TypeAnimation
