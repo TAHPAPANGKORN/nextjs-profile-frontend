@@ -4,6 +4,7 @@ import { StackCards }  from "@/app/components/StackCard/StackCard";
 import { Certificate } from "./components/Certificate/Certificate";
 import { Project } from "@/app/components/Project/Project"
 import  TechnologyUse  from "@/app/components/TechnologyUse/TechnologyUse";
+import Contact from "@/app/components/Contact/Contact"
 
 export const runtime = 'edge';
 
@@ -16,6 +17,7 @@ const cheetahPage = () => {
       <Certificate />
       <TechnologyUse />
       <Project />
+      <Contact />
       </div>
   );
 }

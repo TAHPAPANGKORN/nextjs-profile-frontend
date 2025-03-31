@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { FaHtml5, FaCss3Alt, FaJava, FaPython, FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
