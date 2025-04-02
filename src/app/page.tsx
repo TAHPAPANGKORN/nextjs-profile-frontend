@@ -15,9 +15,9 @@ const cheetahPage = () => {
       <Header />
       <HeroSection />
       <StackCards />
-      <Certificate />
       <TechnologyUse />
       <Project />
+      <Certificate />
       <Contact />
       <Footer />
       </div>
