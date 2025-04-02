@@ -32,7 +32,7 @@ const card = [
   },
   {
     id: 4,
-    title: "Sigma-Calculator",
+    title: "Sigma Calculator",
     description: "Creating an x-bar and Six Sigma calculation program with a UI using Tkinter in Python to practice user interface development.",
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/Sixma-Calculator",
@@ -40,7 +40,7 @@ const card = [
   },
   {
     id: 5,
-    title: "Modulo-Calculator",
+    title: "Modulo Calculator",
     description: "Creating a modulo calculation program with a UI using Tkinter in Python to practice user interface development.",
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/Modulo-Calculator",
@@ -48,7 +48,7 @@ const card = [
   },
   {
     id: 6,
-    title: "PHP-Calculator",
+    title: "PHP Calculator",
     description: "Creating a Calculator use PHP",
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/Website-PHP-Calculator",
@@ -56,7 +56,7 @@ const card = [
   },
   {
     id: 7,
-    title: "code-automatic robot",
+    title: "automatic robot",
     description: "Creating for auto line robot",
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/automatic-robot-PSP-SCHOOL-for-OBEC",
@@ -64,7 +64,7 @@ const card = [
   },
   {
     id: 8,
-    title: "ConnectedWordsGame for Director",
+    title: "ConnectedWordsGame",
     description: "Creating a code for detect same word",
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/ConnectedWordsGameForDirector",

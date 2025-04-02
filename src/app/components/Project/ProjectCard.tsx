@@ -30,7 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         className="rounded-xl shadow-xl shadow-gray-400"
       />
       <div className="flex flex-col gap-3 w-full">
-        <h2 className="font-bold text-2xl">{title}</h2>
+        <h2 className="font-bold max-w-50 text-2xl">{title}</h2>
         <p className="text-[12px] w-90 md:text-sm  md:w-50  lg:text-xl lg:w-130" >{description}</p>
         <div className="flex gap-4 underline underline-offset-1 text-blue-500">
           {projectLink && (

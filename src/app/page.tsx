@@ -5,6 +5,7 @@ import { Certificate } from "./components/Certificate/Certificate";
 import { Project } from "@/app/components/Project/Project"
 import  TechnologyUse  from "@/app/components/TechnologyUse/TechnologyUse";
 import Contact from "@/app/components/Contact/Contact"
+import Footer from "@/app/components/Footer/Footer"
 
 export const runtime = 'edge';
 
@@ -18,6 +19,7 @@ const cheetahPage = () => {
       <TechnologyUse />
       <Project />
       <Contact />
+      <Footer />
       </div>
   );
 }
