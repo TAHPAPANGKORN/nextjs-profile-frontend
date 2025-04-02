@@ -3,7 +3,7 @@ import Link from "next/link";
 export const Header = () => {
   return (
   <div className="flex space-x-10 justify-center items-center fixed top-3 w-full z-10 ">
-    <h1 className="hidden md:block font-semibold">Papangkorn Pitjawong</h1>
+    <h1 className="hidden md:block font-semibold">PAPANGKORN PITJAWONG</h1>
     <nav className="flex gap-1 p-0.5 border border-black/10 rounded-full bg-white/10 backdrop-blur">
       <a  href="#" className="nav-item">Home</a>
       <Link  href="#about" className="nav-item">About</Link>
