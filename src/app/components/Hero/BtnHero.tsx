@@ -9,7 +9,7 @@ function BtnHero() {
           <span className="font-semibold">Explore My Work</span>
         </button>
         </Link>
-        <Link href="#">
+        <Link href="#contact">
         <button className="inline-flex items-center gap-2 border border-black bg-gray-900 text-white h-12 px-6 rounded-xl hover:bg-white hover:border-black/50 hover:text-black transition duration-350">
           <span>📩</span>
           <span className="font-semibold">{"Let's Connect"}</span>
