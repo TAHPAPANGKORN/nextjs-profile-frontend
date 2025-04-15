@@ -2,7 +2,6 @@
 import Image, { StaticImageData } from 'next/image'
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { div } from 'framer-motion/client';
 
 interface CertificateCardProps {
   imageSrc: string | StaticImageData;
