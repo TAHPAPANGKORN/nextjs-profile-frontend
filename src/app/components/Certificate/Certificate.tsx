@@ -1,19 +1,21 @@
 import ComingSoon from "@/app/assets/images/ProjectImage/ComingSoon-image.jpg"
+import ChatGpt from "@/app/assets/images/CertificateImage/chatgpt.jpg"
+import DoBot from "@/app/assets/images/CertificateImage/Dobot.jpg"
 import CertificateCard from "./CertificateCard";
 import React from "react";
 
 const card = [
   {
     id: 1,
-    title: "Poke bot discord",
-    description: "Creating a bot that can replace the missing alarm system on Discord can be done using Python and various libraries, such as `discord.py`, to interact with the Discord API.",
-    imageSrc: ComingSoon,
+    title: "ChatGPT Competitive",
+    description: "At Burapha 1st place",
+    imageSrc: ChatGpt,
   },
   {
     id: 2,
-    title: "Certificate 2",
-    description: "Creating a bot that can replace the missing alarm system on Discord can be done using Python and various libraries, such as `discord.py`, to interact with the Discord API.",
-    imageSrc: ComingSoon,
+    title: "Dobot Competitive",
+    description: "At Burapha 2nd place",
+    imageSrc: DoBot,
   },
 ];
 
