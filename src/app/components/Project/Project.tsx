@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import DiscordProject from "@/app/assets/images/ProjectImage/Discord-Project.png";
 import WebProfile from "@/app/assets/images/ProjectImage/Website-Profile.png";
 import WebNextJs from "@/app/assets/images/ProjectImage/Website-Nextjs.png"
+import WebSameWordChecker from "@/app/assets/images/ProjectImage/Connected-Next.png"
 import ComingSoon from "@/app/assets/images/ProjectImage/ComingSoon-image.jpg"
 
 const card = [
@@ -32,6 +33,14 @@ const card = [
   },
   {
     id: 4,
+    title: "SameWordChecker",
+    description: "Creating a web for detect same word",
+    projectLink: "https://connected-word-game.vercel.app/",
+    repoLink: "https://github.com/TAHPAPANGKORN/Learn-TypeScript",
+    imageSrc: WebSameWordChecker,
+  },
+  {
+    id: 5,
     title: "Sigma Calculator",
     description: "Creating an x-bar and Six Sigma calculation program with a UI using Tkinter in Python to practice user interface development.",
     projectLink: null,
@@ -39,7 +48,7 @@ const card = [
     imageSrc: ComingSoon,
   },
   {
-    id: 5,
+    id: 6,
     title: "Modulo Calculator",
     description: "Creating a modulo calculation program with a UI using Tkinter in Python to practice user interface development.",
     projectLink: null,
@@ -47,7 +56,7 @@ const card = [
     imageSrc: ComingSoon,
   },
   {
-    id: 6,
+    id: 7,
     title: "PHP Calculator",
     description: "Creating a Calculator use PHP",
     projectLink: null,
@@ -55,7 +64,7 @@ const card = [
     imageSrc: ComingSoon,
   },
   {
-    id: 7,
+    id: 8,
     title: "automatic robot",
     description: "Creating for auto line robot",
     projectLink: null,
@@ -63,7 +72,7 @@ const card = [
     imageSrc: ComingSoon,
   },
   {
-    id: 8,
+    id: 9,
     title: "ConnectedWordsGame",
     description: "Creating a code for detect same word",
     projectLink: null,
