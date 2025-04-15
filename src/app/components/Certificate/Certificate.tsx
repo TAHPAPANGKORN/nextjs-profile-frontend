@@ -1,4 +1,3 @@
-import ComingSoon from "@/app/assets/images/ProjectImage/ComingSoon-image.jpg"
 import ChatGpt from "@/app/assets/images/CertificateImage/chatgpt.jpg"
 import DoBot from "@/app/assets/images/CertificateImage/Dobot.jpg"
 import CertificateCard from "./CertificateCard";
