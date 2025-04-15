@@ -63,11 +63,12 @@ const CertificateCard: React.FC<CertificateCardProps> = ({
             Close
           </button>
           <Image
+            onClick={handleViewClick}
             src={imageSrc}
             alt={altText}
             height={600}
             width={800}
-            className="p-4 w-300 rounded-xl"
+            className="p-4 w-300 rounded-xl cursor-pointer"
           />
         </div>
       )}
