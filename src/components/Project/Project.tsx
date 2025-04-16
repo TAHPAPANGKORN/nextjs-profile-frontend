@@ -1,10 +1,10 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
-import DiscordProject from "@/app/assets/images/ProjectImage/Discord-Project.png";
-import WebProfile from "@/app/assets/images/ProjectImage/Website-Profile.png";
-import WebNextJs from "@/app/assets/images/ProjectImage/Website-Nextjs.png"
-import WebSameWordChecker from "@/app/assets/images/ProjectImage/Connected-Next.png"
-import ComingSoon from "@/app/assets/images/ProjectImage/ComingSoon-image.jpg"
+import DiscordProject from "@/assets/images/ProjectImage/Discord-Project.png";
+import WebProfile from "@/assets/images/ProjectImage/Website-Profile.png";
+import WebNextJs from "@/assets/images/ProjectImage/Website-Nextjs.png"
+import WebSameWordChecker from "@/assets/images/ProjectImage/Connected-Next.png"
+import ComingSoon from "@/assets/images/ProjectImage/ComingSoon-image.jpg"
 
 const card = [
   {

@@ -1,6 +1,6 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
-import Logo from "@/app/components/TechnologyUse/Logo"
+import Logo from "@/components/TechnologyUse/Logo"
 
 function TechnologyUse() {
   return (
