@@ -7,7 +7,7 @@ import  TechnologyUse  from "@/components/TechnologyUse/TechnologyUse";
 import Contact from "@/components/Contact/Contact"
 import Footer from "@/components/Footer/Footer"
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 const cheetahPage = () => {
   return (
