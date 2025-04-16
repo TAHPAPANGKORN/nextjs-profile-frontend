@@ -11,7 +11,7 @@ export const runtime = 'edge';
 
 const cheetahPage = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <HeroSection />
       <StackCards />
