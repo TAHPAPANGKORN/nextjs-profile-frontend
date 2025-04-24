@@ -9,9 +9,9 @@ import BuyMeCoffeeBtn from "./UiBtn/BuyMeCoffeeBtn";
 
 function ContactCard() {
   return (
-      <div className="container flex flex-col md:flex-row items-center justify-center gap-3 md:gap-5 m-4 h-140">
-        <div className="flex min-h-full">
-          <div className="bg-white shadow-xl rounded-2xl p-6 flex flex-col gap-3 items-center justify-center">
+      <div className="container flex flex-col md:flex-row items-stretch justify-center gap-3 md:gap-5 m-4 h-auto">
+        <div className="flex ">
+          <div className="bg-white shadow-xl rounded-2xl p-6 flex flex-col gap-3 items-center justify-center h-full">
             <h2 className="text-3xl">Social Media</h2>
             <InstagramBtn />
             <FacebookBtn />
