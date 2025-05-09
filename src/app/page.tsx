@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header/Header";
 import { HeroSection } from "@/components/Hero/Hero";
 import { StackCards }  from "@/components/StackCard/StackCard";
-import  { Certificate } from "@/components/Certificate/Certificate";
+// import  { Certificate } from "@/components/Certificate/Certificate";
 import { Project } from "@/components/Project/Project"
 import  TechnologyUse  from "@/components/TechnologyUse/TechnologyUse";
 import Contact from "@/components/Contact/Contact"
@@ -17,7 +17,7 @@ const cheetahPage = () => {
       <StackCards />
       <TechnologyUse />
       <Project />
-      <Certificate />
+      {/* <Certificate /> */}
       <Contact />
       <Footer />
       </div>
