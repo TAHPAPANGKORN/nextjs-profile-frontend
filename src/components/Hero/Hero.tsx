@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import BtnHero from './BtnHero';
+import Squares from '@/components/Animations/Animations/AnimatedContent/AnimatedContent';
 
 export const HeroSection = () => {
   useEffect(() => {
@@ -14,10 +15,21 @@ export const HeroSection = () => {
     <div
       data-aos="fade-up"
       id="home"
-      className="relative z-0 overflow-x-clip min-h-screen flex flex-col items-center justify-center bg-gradient-to-t from-white to-gray-200"
-      >
+      className="relative z-1 overflow-x-clip min-h-screen flex flex-col items-center justify-center bg-gray-200"
+    >
+      {/* Squares as background */}
+      <div className="absolute inset-0 -z-10 w-full h-full">
+        <Squares 
+          speed={0.5} 
+          squareSize={40}
+          direction="diagonal"
+          borderColor='#fff'
+          hoverFillColor='#1234'
+        />
+      </div>
+      {/* Main content */}
       <div className="flex flex-col justify-center items-center mx-20 md:mx-40">
-        <h1 className="text-3xl md:text-5xl text-center mt-8 tracking-wide">
+        <h1 className="text-3xl font-bold md:text-5xl text-center mt-8 tracking-wide">
           <TypeAnimation
             sequence={[
               "Hi, I am Papangkorn",
