@@ -1,4 +1,3 @@
-import { exportTraceState } from "next/dist/trace";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,6 +7,7 @@ const config: Config = {
             md: "768px",
             lg: "1200px",
         },
-    }
+    },
 };
+
 export default config;

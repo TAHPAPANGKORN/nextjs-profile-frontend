@@ -6,6 +6,7 @@ import { Project } from "@/components/Project/Project"
 import  TechnologyUse  from "@/components/TechnologyUse/TechnologyUse";
 import Contact from "@/components/Contact/Contact"
 import Footer from "@/components/Footer/Footer"
+import AboutMe from "@/components/AboutMe/AboutMe";
 
 // export const runtime = 'edge';
 
@@ -14,10 +15,11 @@ const cheetahPage = () => {
     <div className="overflow-hidden">
       <Header />
       <HeroSection />
-      <StackCards />
+      <AboutMe />
+      {/* <StackCards /> */}
       <TechnologyUse />
       <Project />
-      <Certificate />
+      {/* <Certificate /> */}
       <Contact />
       <Footer />
       </div>
