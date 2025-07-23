@@ -2,6 +2,7 @@ import Image from "next/image";
 import cheetahPic from "@/assets/images/AboutMeImage/cheetah.jpg";
 import { EducationTimeline } from "./TimeLine/EducationTimeLine";
 import Tag from "@/components/AboutMe/Tag/Tag";
+import Marquee from 'react-fast-marquee';
 const education = [
   {
     title: "Burapha University",
@@ -19,7 +20,8 @@ const tags =[
     "Game",
     "Eat",
     "Coding",
-    "Tech"
+    "Technology",
+    "K-Series",
 ];
 const AboutMe = () => {
   return (
@@ -35,11 +37,13 @@ const AboutMe = () => {
             />
             <div className="space-y-2">
               <h2 className="text-2xl font-bold">Thing Me In Luv</h2>
-              <div className="flex flex-row flex-nowrap gap-3 overflow-x-auto scrollbar-hide">
+              <Marquee pauseOnHover={true} direction="right"  autoFill={true} speed={20}>
+                <div className="flex flex-row flex-nowrap gap-3 overflow-x-auto scrollbar-hide ml-3">
                   {tags.map((label, index) => (
                     <Tag key={index} label={label} />
                   ))}
-              </div>
+                </div>
+              </Marquee>
             </div>
           </div>
           <div className="space-y-5">
