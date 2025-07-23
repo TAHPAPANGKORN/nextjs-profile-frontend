@@ -9,7 +9,6 @@ export const TimelineItem = ({
   date,
   description,
   variants,
-  delay = 0,
 }: TimelineItemProps) => {
   return (
     <motion.li className="mb-10 relative pl-6" variants={variants}>
