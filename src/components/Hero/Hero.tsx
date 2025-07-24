@@ -4,7 +4,8 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import BtnHero from './BtnHero';
-import Squares from '@/components/Animations/Animations/AnimatedContent/AnimatedContent';
+import Squares from '@/components/Animations/AnimatedContent/AnimatedContent';
+import ScrambledText from '@/components/Animations/AnimatedContent/AnimatedFont';
 
 export const HeroSection = () => {
   useEffect(() => {
@@ -19,22 +20,22 @@ export const HeroSection = () => {
     >
       {/* Squares as background */}
       <div className="absolute inset-0 -z-10 w-full h-full">
-        <Squares 
-          speed={0.5} 
+        <Squares
+          speed={0.5}
           squareSize={40}
           direction="diagonal"
-          borderColor='#fff'
-          hoverFillColor='#'
+          borderColor="#fff"
+          hoverFillColor="#"
         />
       </div>
       {/* Main content */}
       <div className="flex flex-col justify-center items-center mx-20 md:mx-40">
-        <h1 className="text-3xl md:text-5xl text-center mt-8 tracking-wide">
+        <h1 className="text-4xl font-bold md:text-5xl text-center mt-8 tracking-wide">
           <TypeAnimation
             sequence={[
               "Hi, I am Papangkorn",
-              3000, 
-              "Hi, I am study in com-sci",
+              3000,
+              "Hi, I am Cheetah",
               2000,
             ]}
             wrapper="span"
@@ -42,13 +43,19 @@ export const HeroSection = () => {
             repeat={Infinity}
           />
         </h1>
-        <p className="mt-4 text-center">
-          I am currently a Computer Science major with a strong interest in
-          programming, software development, and problem-solving. I enjoy
-          learning about new technologies and improving my coding skills. My
-          goal is to apply my knowledge to real-world applications and
-          contribute to innovative projects in the tech industry.
-        </p>
+        <ScrambledText
+          radius={100}
+          duration={1.2}
+          speed={0.5}
+          scrambleChars=".:"
+          className='mt-4 text-center text-black'
+        >
+            I am currently a Computer Science major with a strong interest in
+            programming, software development, and problem-solving. I enjoy
+            learning about new technologies and improving my coding skills. My
+            goal is to apply my knowledge to real-world applications and
+            contribute to innovative projects in the tech industry.
+        </ScrambledText>
       </div>
       <BtnHero />
     </div>

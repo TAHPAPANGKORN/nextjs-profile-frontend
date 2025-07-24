@@ -5,7 +5,7 @@ import Tag from "@/components/AboutMe/Tag/Tag";
 const education = [
   {
     title: "Burapha University",
-    date: "2014 - Present",
+    date: "2024 - Present",
     description: "computerScience major",
   },
   {
@@ -19,11 +19,11 @@ const tags =[
     "Game",
     "Eat",
     "Coding",
-    "Technology",
+    "Tech",
 ];
 const AboutMe = () => {
   return (
-    <div className="flex flex-col justify-center items-center  p-10 space-y-4 md:space-y-20 ">
+    <div className="flex flex-col justify-center items-center p-10 space-y-4 md:space-y-20">
       <h1 className="header-item">AboutMe</h1>
       <div className="max-w-240 ">
         <div className="flex flex-col md:flex-row justify-between gap-10">
@@ -44,7 +44,7 @@ const AboutMe = () => {
           </div>
           <div className="space-y-5">
             <div className="space-y-1">
-              <h2 className="font-bold text-3xl">Papangkorn Pitjawong</h2>
+              <h2 className="font-bold text-3xl min-w-80">Papangkorn Pitjawong</h2>
               <h3 className="text-blue-500 font-bold">
                 Call Me Cheetah || Tah
               </h3>
