@@ -5,7 +5,7 @@ html {
 }
 @layer base{
   .nav-item {        
-    @apply cursor-pointer px-1 py-1.5 rounded-full text-black/70 text-sm font-semibold hover:bg-black/10 hover:text-black transition duration-300 md:px-4;
+    @apply cursor-pointer p-1.5 rounded-full text-black/70 text-sm font-semibold hover:bg-black/10 hover:text-black transition duration-300 flex justify-center items-center md:px-4;
   }
   .header-item{
     @apply text-3xl font-bold  z-9 tracking-wide md:text-5xl

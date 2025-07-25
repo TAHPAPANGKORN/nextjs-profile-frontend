@@ -14,12 +14,10 @@ const ScrollSections = () => {
       </Element>
       <Element name="about">
         <AboutMe />
+        <TechnologyUse />
       </Element>
       <Element name="project">
         <Project />
-      </Element>
-      <Element name="technology">
-        <TechnologyUse />
       </Element>
       <Element name="contact">
         <Contact />
