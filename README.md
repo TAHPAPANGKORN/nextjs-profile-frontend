@@ -1,2 +1,3 @@
 # Check My Project
-Open [http://www.papangkorn.info](papangkorn.info)
+Open [papangkorn.info](https//www.papangkorn.info)
+
