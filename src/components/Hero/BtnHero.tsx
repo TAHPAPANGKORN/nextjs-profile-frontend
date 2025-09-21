@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 import Link from 'next/link'
-
+import { Element } from "react-scroll";
 function BtnHero() {
   return (
       <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">

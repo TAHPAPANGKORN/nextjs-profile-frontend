@@ -1,4 +1,3 @@
-import ContactCard from "./ContactCard";
 import GetInTouch from "./GetInTouch";
 
 

@@ -29,7 +29,7 @@ function GetInTouch() {
         </h2>
         <span className="border-b-2 border-[#3A86FF] w-[60%] md:w-[70%] text-center block mx-auto mb-4"></span>
 
-        <div className="flex-1 overflow-y-auto scrollbar-style">
+        <div className="flex-1 overflow-y-auto">
           <div className="m-4 space-y-4 flex flex-col justify-center items-center">
             <div className="flex flex-col gap-3">
               <h2 className="text-xl md:text-2xl font-bold">Contact Information</h2>
