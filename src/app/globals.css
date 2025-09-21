@@ -18,6 +18,16 @@ html {
   .tag-item{
     @apply px-5 text-sm border border-black/10 rounded-full bg-white/10 backdrop-blur cursor-pointer text-center ;
   }
+  .scrollbar-style{
+    @apply [&::-webkit-scrollbar]:w-2
+    [&::-webkit-scrollbar-track]:rounded-full
+    [&::-webkit-scrollbar-track]:bg-gray-100
+    [&::-webkit-scrollbar-thumb]:rounded-full
+    [&::-webkit-scrollbar-thumb]:bg-gray-300
+    dark:[&::-webkit-scrollbar-track]:bg-neutral-700
+    dark: [&::-webkit-scrollbar-thumb]:bg-neutral-500
+    
+  }
 }
 p{
   font-size: 18px;
