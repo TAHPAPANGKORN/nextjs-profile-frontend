@@ -16,6 +16,7 @@ const card = [
     projectLink: "https://discord.com/oauth2/authorize?client_id=1208764608727359601",
     repoLink: "https://github.com/TAHPAPANGKORN/PokeBotDiscord",
     imageSrc: DiscordProject,
+    techStack: ["python"]
   },
   {
     id: 2,
@@ -24,6 +25,7 @@ const card = [
     projectLink: "#",
     repoLink: "https://github.com/TAHPAPANGKORN/nextJs-Profile",
     imageSrc: WebNextJs,
+    techStack: ["nextjs", "typescript", "tailwind"]
   },
   {
     id: 3,
@@ -32,6 +34,7 @@ const card = [
     projectLink: "https://papangkorn-profile.pages.dev",
     repoLink: "https://github.com/TAHPAPANGKORN/Papangkorn-Profile",
     imageSrc: WebProfile,
+    techStack: ["html", "css", "javascript"]
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const card = [
     projectLink: "https://connected-word-game.vercel.app/",
     repoLink: "https://github.com/TAHPAPANGKORN/Learn-TypeScript",
     imageSrc: WebSameWordChecker,
+    techStack: ["nextjs", "typescript", "tailwind"]
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const card = [
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/Sixma-Calculator",
     imageSrc: ComingSoon,
+    techStack: ["python"]
   },
   {
     id: 6,
@@ -56,6 +61,7 @@ const card = [
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/Modulo-Calculator",
     imageSrc: ComingSoon,
+    techStack: ["python"]
   },
   {
     id: 7,
@@ -64,6 +70,7 @@ const card = [
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/Website-PHP-Calculator",
     imageSrc: ComingSoon,
+    techStack: ["php"]
   },
   {
     id: 8,
@@ -72,6 +79,7 @@ const card = [
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/automatic-robot-PSP-SCHOOL-for-OBEC",
     imageSrc: ComingSoon,
+    techStack: ["arduino"]
   },
   {
     id: 9,
@@ -80,6 +88,7 @@ const card = [
     projectLink: null,
     repoLink: "https://github.com/TAHPAPANGKORN/ConnectedWordsGameForDirector",
     imageSrc: ComingSoon,
+    techStack: ["nextjs", "tailwind", "typescript"]
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ const card = [
     projectLink: "https://ifcheckshirt.vercel.app/",
     repoLink: "https://github.com/FTGFLabs/checkShirtForInformatics",
     imageSrc: InformaticsCheckShirt,
+    techStack: ["nextjs", "tailwind", "typescript"]
   },
   {
     id: 11,
@@ -96,6 +106,7 @@ const card = [
     projectLink: null,
     repoLink: "https://github.com/FTGFLabs/Informatics-Schedule-Viewer",
     imageSrc: InformaticsSchedule,
+    techStack: ["html", "css", "javascript"]
   },
 ];
 
@@ -112,6 +123,7 @@ export const Project = () => {
           description={item.description}
           projectLink={item.projectLink}
           repoLink={item.repoLink}
+          techStack={item.techStack}
         />
       ))}
     </div>
