@@ -6,6 +6,7 @@ import WebNextJs from "@/assets/images/ProjectImage/Website-Nextjs.png"
 import WebSameWordChecker from "@/assets/images/ProjectImage/Connected-Next.png"
 import InformaticsCheckShirt from "@/assets/images/ProjectImage/If-Check-Shirt.png"
 import InformaticsSchedule from "@/assets/images/ProjectImage/Informatics-Schedule-Viewer.png"
+import RealOrFakeGame from "@/assets/images/ProjectImage/Real-Or-Fake.png"
 import ComingSoon from "@/assets/images/ProjectImage/ComingSoon-image.jpg"
 
 const card = [
@@ -107,6 +108,15 @@ const card = [
     repoLink: "https://github.com/FTGFLabs/Informatics-Schedule-Viewer",
     imageSrc: InformaticsSchedule,
     techStack: ["html", "css", "javascript"]
+  },
+  {
+    id: 12,
+    title: "Real or Fake Game",
+    description: "Collaborating on a game to distinguish real and fake words",
+    projectLink: "https://www.realorfake.games/",
+    repoLink: "https://github.com/JatenipatChanapisitthi/Real-or-FaKe-game",
+    imageSrc: RealOrFakeGame,
+    techStack: ["nextjs", "tailwind", "typescript"]
   },
 ];
 
