@@ -5,6 +5,7 @@ import {
   closestCenter,
   KeyboardSensor,
   PointerSensor,
+  TouchSensor,
   useSensor,
   useSensors,
   DragEndEvent,
@@ -57,7 +58,10 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
     <div
       ref={setNodeRef}
       style={style}
-      className={`group flex items-center gap-3 md:gap-6 p-3 md:p-4 rounded-2xl border border-transparent mb-2 ${
+      {...attributes}
+      {...listeners}
+      onClick={() => onEdit(item)}
+      className={`group flex items-center gap-3 md:gap-6 p-3 md:p-4 rounded-2xl border border-transparent mb-2 select-none touch-none cursor-pointer ${
         isDragging 
           ? 'bg-white shadow-2xl border-zinc-200 cursor-grabbing z-50' 
           : 'transition-all duration-200 hover:bg-zinc-50/80 hover:border-zinc-100'
@@ -65,13 +69,9 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
         !item.is_active && !isDragging ? 'opacity-60 grayscale-[0.5]' : ''
       }`}
     >
-      <button
-        {...attributes}
-        {...listeners}
-        className="cursor-grab active:cursor-grabbing p-1.5 md:p-2 text-zinc-300 hover:text-zinc-500 transition-colors shrink-0"
-      >
-        <GripVertical size={18} className="w-4 h-4 md:w-[18px] md:h-[18px]" />
-      </button>
+      <div className="p-3 md:p-2 text-zinc-300 hover:text-zinc-500 transition-colors shrink-0 -ml-2 md:ml-0">
+        <GripVertical size={18} className="w-5 h-5 md:w-[18px] md:h-[18px]" />
+      </div>
 
       <div className="w-14 h-9 md:w-20 md:h-12 rounded-lg md:rounded-xl overflow-hidden flex-shrink-0 bg-zinc-100 border border-zinc-100 shadow-sm relative shrink-0">
         {item.image_src ? (
@@ -87,7 +87,7 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
         )}
       </div>
 
-      <div className="flex-1 min-w-0 flex flex-col justify-center cursor-pointer" onClick={() => onEdit(item)}>
+      <div className="flex-1 min-w-0 flex flex-col justify-center">
         <div className="flex items-center gap-1.5 md:gap-2 mb-0.5">
           <h3 className={`font-bold text-zinc-900 truncate text-[11px] md:text-sm tracking-tight ${!item.is_active ? 'text-zinc-500' : ''}`}>
             {item.title}
@@ -166,6 +166,12 @@ const DraggableList: React.FC<DraggableListProps> = ({ items, onReorder, onDelet
     useSensor(PointerSensor, {
       activationConstraint: {
         distance: 8,
+      },
+    }),
+    useSensor(TouchSensor, {
+      activationConstraint: {
+        delay: 250,
+        tolerance: 5,
       },
     }),
     useSensor(KeyboardSensor, {
