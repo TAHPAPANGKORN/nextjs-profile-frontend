@@ -14,7 +14,11 @@ import {
   SiCss3,
   SiJavascript,
   SiArduino,
+  SiVuedotjs,
+  SiQuasar,
+  SiNestjs,
 } from "react-icons/si";
+import { GiPineapple } from "react-icons/gi";
 
 interface ProjectCardProps {
   imageSrc: string | StaticImageData;
@@ -23,6 +27,7 @@ interface ProjectCardProps {
   description: string;
   projectLink: string | null;
   repoLink: string;
+  backendRepoLink?: string;
   techStack?: string[];
 }
 
@@ -40,6 +45,10 @@ const TECH_DATA: Record<
   css: { icon: SiCss3, color: "#1572B6", name: "CSS3" },
   javascript: { icon: SiJavascript, color: "#F7DF1E", name: "JavaScript" },
   arduino: { icon: SiArduino, color: "#00979D", name: "Arduino" },
+  vue: { icon: SiVuedotjs, color: "#4FC08D", name: "Vue.js" },
+  quasar: { icon: SiQuasar, color: "#1976D2", name: "Quasar" },
+  pinia: { icon: GiPineapple, color: "#FFE148", name: "Pinia" },
+  nestjs: { icon: SiNestjs, color: "#E0234E", name: "NestJS" },
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -49,6 +58,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   description,
   projectLink,
   repoLink,
+  backendRepoLink,
   techStack,
 }) => {
   const [showImage, setShowImage] = useState(false);
@@ -88,9 +98,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {/* --- TRICK TECH STACK SECTION --- */}
         {techStack && techStack.length > 0 && (
           <div className="flex items-center gap-3 mt-1 mb-1">
-            {techStack.slice(0, 5).map((t) => {
+            {techStack.map((t) => {
               // Increased slice to 5 for better visibility
-              const key = t.toLowerCase();
+              const key = t.trim().toLowerCase();
               const tech = TECH_DATA[key];
 
               if (!tech) return null;
@@ -128,14 +138,36 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           )}
 
           <div className="flex items-center gap-2">
-            <Link
-              href={repoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-500 flex items-center gap-1 transition-colors"
-            >
-              <span>GitHub Repo</span>
-            </Link>
+            {backendRepoLink ? (
+              <div className="flex gap-2">
+                <Link
+                  href={repoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-500 flex items-center gap-1 transition-colors"
+                >
+                  <span>Git Frontend</span>
+                </Link>
+                <span>/</span>
+                <Link
+                  href={backendRepoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-500 flex items-center gap-1 transition-colors"
+                >
+                  <span>Git Backend</span>
+                </Link>
+              </div>
+            ) : (
+              <Link
+                href={repoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-500 flex items-center gap-1 transition-colors"
+              >
+                <span>GitHub Repo</span>
+              </Link>
+            )}
           </div>
         </div>
 
