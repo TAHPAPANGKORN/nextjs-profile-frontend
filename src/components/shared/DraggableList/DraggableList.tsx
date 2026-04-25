@@ -17,7 +17,8 @@ import {
 } from '@dnd-kit/sortable';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { GripVertical, Trash2, Edit3, ExternalLink } from 'lucide-react';
+import { Edit3, ExternalLink, GripVertical, Trash2, Image as ImageIcon } from 'lucide-react';
+import Image from 'next/image';
 import StatusToggle from '@/components/shared/StatusToggle/StatusToggle';
 
 import { Project } from '@/services/projectService';
@@ -74,7 +75,13 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
 
       <div className="w-14 h-9 md:w-20 md:h-12 rounded-lg md:rounded-xl overflow-hidden flex-shrink-0 bg-zinc-100 border border-zinc-100 shadow-sm relative shrink-0">
         {item.image_src ? (
-          <img src={item.image_src} alt={item.title} className="w-full h-full object-cover" />
+          <Image 
+            src={item.image_src} 
+            alt={item.title} 
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 56px, 80px"
+          />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-[7px] md:text-[8px] text-zinc-400 font-black uppercase tracking-tighter">No Image</div>
         )}

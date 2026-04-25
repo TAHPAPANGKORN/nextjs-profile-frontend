@@ -21,6 +21,8 @@ import {
   X
 } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default function AdminDashboard() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
