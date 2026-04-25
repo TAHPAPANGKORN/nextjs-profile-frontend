@@ -17,8 +17,18 @@ import {
   SiVuedotjs,
   SiQuasar,
   SiNestjs,
+  SiSupabase,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
+  SiDocker,
+  SiNodedotjs,
+  SiFirebase,
+  SiVercel,
+  SiGitlab,
+  SiGithub,
 } from "react-icons/si";
-import { GiPineapple } from "react-icons/gi";
+import { GiPineapple, GiWrench } from "react-icons/gi";
 
 interface ProjectCardProps {
   imageSrc: string | StaticImageData;
@@ -49,6 +59,17 @@ const TECH_DATA: Record<
   quasar: { icon: SiQuasar, color: "#1976D2", name: "Quasar" },
   pinia: { icon: GiPineapple, color: "#FFE148", name: "Pinia" },
   nestjs: { icon: SiNestjs, color: "#E0234E", name: "NestJS" },
+  supabase: { icon: SiSupabase, color: "#3ECF8E", name: "Supabase" },
+  mysql: { icon: SiMysql, color: "#4479A1", name: "MySQL" },
+  postgresql: { icon: SiPostgresql, color: "#4169E1", name: "PostgreSQL" },
+  mongodb: { icon: SiMongodb, color: "#47A248", name: "MongoDB" },
+  docker: { icon: SiDocker, color: "#2496ED", name: "Docker" },
+  nodejs: { icon: SiNodedotjs, color: "#339933", name: "Node.js" },
+  firebase: { icon: SiFirebase, color: "#FFCA28", name: "Firebase" },
+  vercel: { icon: SiVercel, color: "#000000", name: "Vercel" },
+  gitlab: { icon: SiGitlab, color: "#FC6D26", name: "GitLab" },
+  github: { icon: SiGithub, color: "#181717", name: "GitHub" },
+  moralis: { icon: GiWrench, color: "#000000", name: "Moralis" },
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -87,6 +108,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         alt={altText}
         height={300}
         width={500}
+        unoptimized={true}
         className="rounded-xl shadow-xl shadow-gray-400 cursor-pointer transition-transform duration-300 hover:scale-[1.02]"
       />
       <div className="flex flex-col gap-3 w-full">
@@ -97,27 +119,29 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
         {/* --- TRICK TECH STACK SECTION --- */}
         {techStack && techStack.length > 0 && (
-          <div className="flex items-center gap-3 mt-1 mb-1">
+          <div className="flex flex-wrap items-center gap-3 mt-1 mb-1">
             {techStack.map((t) => {
-              // Increased slice to 5 for better visibility
               const key = t.trim().toLowerCase();
               const tech = TECH_DATA[key];
-
-              if (!tech) return null;
-              const { icon: Icon, color, name } = tech;
+              const Icon = tech?.icon;
+              const name = tech?.name || t;
 
               return (
-                <div key={key} className="relative group ">
-                  {/* Tooltip (Hidden by default, shown on group-hover) */}
-                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-auto p-1.5 min-w-[60px] text-center text-xs text-white bg-black rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 whitespace-nowrap">
+                <div key={key} className="relative group">
+                  {/* Tooltip */}
+                  <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-auto px-2 py-1 text-center text-[10px] font-bold text-white bg-slate-900 rounded-md opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none z-10 whitespace-nowrap shadow-xl">
                     {name}
-                    {/* Tiny triangle for tooltip arrow */}
-                    <span className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-black"></span>
+                    <span className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-900"></span>
                   </span>
 
                   {/* Icon Container */}
-                  <div className="p-2 rounded-full bg-gray-100 shadow-sm border border-gray-200 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1">
-                    <Icon className="w-5 h-5 text-gray-400 transition-colors duration-300" />
+                  <div className="flex items-center gap-2 p-2 rounded-xl bg-white shadow-sm border border-gray-100 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1 group-hover:border-blue-200">
+                    {Icon ? (
+                      <Icon className="w-4 h-4 transition-colors duration-300" style={{ color: tech.color }} />
+                    ) : (
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
+                    )}
+                    <span className="text-[10px] font-black text-slate-600 uppercase tracking-tight">{name}</span>
                   </div>
                 </div>
               );
@@ -140,15 +164,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="flex items-center gap-2">
             {backendRepoLink ? (
               <div className="flex gap-2">
-                <Link
-                  href={repoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gray-500 flex items-center gap-1 transition-colors"
-                >
-                  <span>Git Frontend</span>
-                </Link>
-                <span>/</span>
+                {repoLink && (
+                  <Link
+                    href={repoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gray-500 flex items-center gap-1 transition-colors"
+                  >
+                    <span>Git Frontend</span>
+                  </Link>
+                )}
+                {repoLink && backendRepoLink && <span>/</span>}
                 <Link
                   href={backendRepoLink}
                   target="_blank"
@@ -159,14 +185,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 </Link>
               </div>
             ) : (
-              <Link
-                href={repoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-gray-500 flex items-center gap-1 transition-colors"
-              >
-                <span>GitHub Repo</span>
-              </Link>
+              repoLink && (
+                <Link
+                  href={repoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gray-500 flex items-center gap-1 transition-colors"
+                >
+                  <span>GitHub Repo</span>
+                </Link>
+              )
             )}
           </div>
         </div>
@@ -185,6 +213,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               alt={altText}
               height={600}
               width={800}
+              unoptimized={true}
               className="p-4 w-auto max-h-[90vh] rounded-xl cursor-pointer object-contain"
             />
           </div>
