@@ -21,6 +21,8 @@ import {
   X
 } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default function AdminDashboard() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
@@ -154,18 +156,32 @@ export default function AdminDashboard() {
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-[#09090B] font-sans selection:bg-blue-100 flex overflow-hidden">
+      {/* Sidebar Overlay */}
+      {sidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-zinc-900/40 backdrop-blur-sm z-[45] lg:hidden animate-in fade-in duration-300"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
       <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-white border-r border-zinc-100 transition-all duration-300 lg:translate-x-0 lg:static ${
         sidebarOpen ? 'translate-x-0 opacity-100 visible' : '-translate-x-full opacity-0 invisible lg:opacity-100 lg:visible'
       }`}>
         <div className="h-full flex flex-col p-6">
-          <div className="flex items-center gap-3 mb-10 px-2">
-            <div className="bg-zinc-900 p-2 rounded-xl text-white">
-              <ShieldCheck size={22} className="text-blue-400" />
-            </div>
-            <div>
+          <div className="flex items-center justify-between mb-10 px-2">
+            <div className="flex items-center gap-3">
+              <div className="bg-zinc-900 p-2 rounded-xl text-white">
+                <ShieldCheck size={22} className="text-blue-400" />
+              </div>
               <h1 className="font-black text-lg tracking-tight leading-none">ADMIN<span className="text-blue-600">CORE</span></h1>
             </div>
+            <button 
+              onClick={() => setSidebarOpen(false)}
+              className="lg:hidden p-2 text-zinc-400 hover:bg-zinc-50 rounded-lg transition-colors"
+            >
+              <X size={20} />
+            </button>
           </div>
 
           <nav className="flex-1 space-y-2 overflow-y-auto pr-2 scrollbar-hide">

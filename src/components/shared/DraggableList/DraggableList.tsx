@@ -17,7 +17,8 @@ import {
 } from '@dnd-kit/sortable';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { GripVertical, Trash2, Edit3, ExternalLink } from 'lucide-react';
+import { Edit3, ExternalLink, GripVertical, Trash2, Image as ImageIcon } from 'lucide-react';
+import Image from 'next/image';
 import StatusToggle from '@/components/shared/StatusToggle/StatusToggle';
 
 import { Project } from '@/services/projectService';
@@ -74,7 +75,13 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
 
       <div className="w-14 h-9 md:w-20 md:h-12 rounded-lg md:rounded-xl overflow-hidden flex-shrink-0 bg-zinc-100 border border-zinc-100 shadow-sm relative shrink-0">
         {item.image_src ? (
-          <img src={item.image_src} alt={item.title} className="w-full h-full object-cover" />
+          <Image 
+            src={item.image_src} 
+            alt={item.title} 
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 56px, 80px"
+          />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-[7px] md:text-[8px] text-zinc-400 font-black uppercase tracking-tighter">No Image</div>
         )}
@@ -82,7 +89,7 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
 
       <div className="flex-1 min-w-0 flex flex-col justify-center cursor-pointer" onClick={() => onEdit(item)}>
         <div className="flex items-center gap-1.5 md:gap-2 mb-0.5">
-          <h3 className={`font-bold text-zinc-900 truncate text-xs md:text-sm tracking-tight ${!item.is_active ? 'text-zinc-500' : ''}`}>
+          <h3 className={`font-bold text-zinc-900 truncate text-[11px] md:text-sm tracking-tight ${!item.is_active ? 'text-zinc-500' : ''}`}>
             {item.title}
           </h3>
           {item.is_active && (
@@ -90,14 +97,14 @@ const SortableItem = ({ item, onDelete, onToggleStatus, onEdit }: {
           )}
         </div>
         <div className="flex items-center gap-2">
-          <p className="text-[9px] md:text-[10px] text-zinc-400 font-bold uppercase tracking-widest flex items-center gap-1 md:gap-1.5 truncate">
+          <p className="hidden md:flex text-[9px] md:text-[10px] text-zinc-400 font-bold uppercase tracking-widest items-center gap-1.5 truncate">
             {item.tech_stack.slice(0, 2).map((tech, i) => (
               <React.Fragment key={tech}>
-                <span>{tech}</span>
-                {i < Math.min(item.tech_stack.length, 2) - 1 && <span className="w-0.5 h-0.5 md:w-1 md:h-1 rounded-full bg-zinc-200"></span>}
+                <span className="shrink-0">{tech}</span>
+                {i < Math.min(item.tech_stack.length, 2) - 1 && <span className="w-1 h-1 rounded-full bg-zinc-200 shrink-0"></span>}
               </React.Fragment>
             ))}
-            {item.tech_stack.length > 2 && <span className="text-zinc-300">+{item.tech_stack.length - 2}</span>}
+            {item.tech_stack.length > 2 && <span className="text-zinc-300 shrink-0">+{item.tech_stack.length - 2}</span>}
           </p>
         </div>
       </div>
